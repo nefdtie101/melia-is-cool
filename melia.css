@@ -1,0 +1,634 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5edd6 !important;
+    overflow: hidden;
+}
+
+#Brief {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust as needed */
+    text-align: center;
+    font-family: 'The One Jenny Made', sans-serif;
+    font-size: 2em;
+}
+
+.music-box {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+
+}
+
+.box-inside {
+    top: -110px; /* Adjusted to align with the bottom position */
+}
+
+.inner {
+    top: 48px; /* Adjusted to align with the bottom position */
+}
+
+.box {
+    top: 60px; /* Adjusted to align with the bottom position */
+}
+
+.music {
+    top: 10px; /* Adjusted to align with the bottom position */
+}
+
+.shadow {
+    top: 190px; /* Adjusted to align with the bottom position */
+}
+
+.ballerina {
+    position: absolute;
+    filter: drop-shadow(1px 0 rgba(0,0,0,.3));
+    z-index:2;
+    left: 3px;
+    top:20px;
+    animation: rotate 5s linear infinite reverse;
+}
+
+.ballerina:before {
+    content:"";
+    position: absolute;
+    width:7px;
+    height:10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #3c3f48;
+    top:125px;
+    left:4px;
+    box-shadow: 0 3px #333;
+}
+
+@keyframes rotate {
+    to {transform: rotateY(360deg);}
+}
+
+.head {
+    position: absolute;
+    background-color: #f8f9fa;
+    border-radius:50%;
+    width: 20px;
+    height: 23px;
+}
+
+.head:before, .head:after {
+    position: absolute;
+    content:"";
+    background-color: #f8f9fa;
+}
+
+
+.head:before {
+    border-radius:50%;
+    width:12px;
+    height: 12px;
+    top:-3px;
+}
+
+
+.head:after {
+    width:5px;
+    height: 15px;
+    top:12px;
+    left:7px;
+}
+
+
+
+input#music {
+    display: none;
+}
+
+#music:checked ~ .box-inside {
+    transform: translateY(-115px);
+}
+
+.box-inside {
+    position: absolute;
+    transition: .5s;
+    top:110px;
+    left:-10px;
+}
+
+.inner {
+    background-color: #1a232a;
+    position: absolute;
+    width:200px;
+    height:40px;
+    border-radius: 20px 20px 0 0;
+    top:158px;
+    left:-95px;
+}
+
+.box {
+    position: absolute;
+    width: 270px;
+    background-color:#A1662F;
+    height:140px;
+    top:170px;
+    left:-145px;
+    z-index:3;
+    border-radius: 0 0 5px 5px;
+}
+
+.box:before {
+    content:"La vie en rose";
+    position: absolute;
+    font-size: 30px;
+    font-family: "Brush Script MT", cursive;
+    bottom: 10px;
+    right:108px;
+}
+
+.music {
+    position: absolute;
+    width:270px;
+    background-color: #A1662F;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    z-index:10;
+    top:120px;
+    left:-145px;
+    transform-origin: left;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#music:checked + .music {
+    transform: rotate(-125deg) translateX(-20px) translateY(-30px);
+}
+
+.shadow {
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+    width:350px;
+    height: 30px;
+    border-radius: 50%;
+    top:300px;
+    left:-185px;
+    transition: .5s;
+    transform-origin: right;
+}
+
+#music:checked ~ .shadow {
+    transform: scaleX(1.4);
+}
+
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #122139;
+    overflow: hidden;
+}
+
+.container {
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform: scale(0.4);
+}
+.container div {
+    position: absolute;
+}
+.container .glass {
+    height: 420px;
+    width: 250px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    -moz-border-radius: 300px 300px 0px 0px;
+    -webkit-border-radius: 300px;
+    border-radius: 300px 300px 0px 0px;
+    left: -80px;
+    top: -100px;
+    border-bottom: 15px solid rgba(255, 255, 255, 0.5);
+}
+.container .glass:after {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.28);
+    content: '';
+    position: absolute;
+    height: 80px;
+    top: 430px;
+    border-radius: 100px;
+    left: 10px;
+    top: 180px;
+}
+.container .glass:before {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.28);
+    content: '';
+    position: absolute;
+    height: 15px;
+    top: 430px;
+    border-radius: 100px;
+    left: 10px;
+    top: 280px;
+}
+/*.container .glow {*/
+/*    position: absolute;*/
+/*    width: 170px;*/
+/*    height: 170px;*/
+/*    -moz-border-radius: 100%;*/
+/*    -webkit-border-radius: 100%;*/
+/*    border-radius: 100%;*/
+/*    border: 1px solid rgba(245, 148, 184, 0.47);*/
+/*    box-shadow: 0px 0px 10px #f594b8;*/
+/*    left: -40px;*/
+/*    top: -40px;*/
+/*    -moz-transition: all 0.5s ease;*/
+/*    -o-transition: all 0.5s ease;*/
+/*    -webkit-transition: all 0.5s ease;*/
+/*    transition: all 0.5s ease;*/
+/*    -moz-animation: glowing 2.5s ease-in-out infinite;*/
+/*    -webkit-animation: glowing 2.5s ease-in-out infinite;*/
+/*    animation: glowing 2.5s ease-in-out infinite;*/
+/*}*/
+.container .rose-petals > div {
+    background: #d52d58;
+    width: 45px;
+    height: 80px;
+    position: absolute;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.container .rose-petals > div:nth-child(1) {
+    border-radius: 15px;
+    left: 20px;
+    top: -6px;
+    background: #d52d58;
+}
+.container .rose-petals > div:nth-child(2), .container .rose-petals > div:nth-child(4), .container .rose-petals > div:nth-child(6) {
+    border-radius: 0px 30px 0px 30px;
+    background: #b81b43;
+    left: 0;
+    transform-origin: bottom right;
+}
+.container .rose-petals > div:nth-child(3), .container .rose-petals > div:nth-child(5), .container .rose-petals > div:nth-child(7) {
+    border-radius: 30px 0px 30px 0px;
+    left: 40px;
+    transform-origin: bottom left;
+}
+.container .rose-petals > div:nth-child(2) {
+    -moz-animation: openRose2 3s ease-in-out;
+    -webkit-animation: openRose2 3s ease-in-out;
+    animation: openRose2 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 5;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-petals > div:nth-child(3) {
+    -moz-animation: openRose3 3s ease-in-out;
+    -webkit-animation: openRose3 3s ease-in-out;
+    animation: openRose3 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 4;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-petals > div:nth-child(4) {
+    -moz-animation: openRose4 3s ease-in-out;
+    -webkit-animation: openRose4 3s ease-in-out;
+    animation: openRose4 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 3;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-petals > div:nth-child(5) {
+    -moz-animation: openRose5 3s ease-in-out;
+    -webkit-animation: openRose5 3s ease-in-out;
+    animation: openRose5 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-petals > div:nth-child(6) {
+    -moz-animation: openRose6 3s ease-in-out;
+    -webkit-animation: openRose6 3s ease-in-out;
+    animation: openRose6 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    background: #c9204b;
+    top: "";
+    height: "";
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-petals > div:nth-child(7) {
+    -moz-animation: openRose7 3s ease-in-out;
+    -webkit-animation: openRose7 3s ease-in-out;
+    animation: openRose7 3s ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 0;
+    background: #c9204b;
+    top: "";
+    height: "";
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .rose-leaves > div:nth-last-child(1) {
+    width: 55px;
+    height: 30px;
+    background: #338f37;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+.container .rose-leaves > div:nth-child(1) {
+    width: 6px;
+    height: 230px;
+    border: none;
+    top: 80px;
+    background: #066406;
+    left: 40px;
+}
+.container .thorns > div {
+    width: 30px;
+    height: 30px;
+    background: #066406;
+    top: 100px;
+    left: 10px;
+}
+.container .thorns > div:after {
+    width: 41px;
+    height: 31px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: #122139;
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 17px;
+}
+.container .thorns > div:before {
+    width: 41px;
+    height: 31px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: #122139;
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: -11px;
+    z-index: 0;
+}
+.container .thorns > div:nth-child(2) {
+    top: 150px;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: 45px;
+}
+.container .thorns > div:nth-child(3) {
+    top: 180px;
+}
+.container .thorns > div:nth-child(4) {
+    top: 220px;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: 45px;
+}
+.container .sparkles {
+    bottom: -40px;
+}
+.container .sparkles > div {
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background: #ff96c0;
+    box-shadow: 0px 0px 12px 2px #ff4e85;
+    bottom: 0;
+    opacity: 0;
+    -moz-animation: sparkle 4s ease-in-out infinite;
+    -webkit-animation: sparkle 4s ease-in-out infinite;
+    animation: sparkle 4s ease-in-out infinite;
+}
+.container .sparkles > div:nth-child(1) {
+    left: 60px;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.container .sparkles > div:nth-child(2) {
+    left: 158px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .sparkles > div:nth-child(3) {
+    left: -22px;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.container .sparkles > div:nth-child(4) {
+    left: 10px;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.container .sparkles > div:nth-child(5) {
+    left: 177px;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.container .sparkles > div:nth-child(6) {
+    left: -82px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.container .sparkles > div:nth-child(7) {
+    left: 45px;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.container .sparkles > div:nth-child(8) {
+    left: 74px;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.container .sparkles > div:nth-child(9) {
+    left: -79px;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes $animationName {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 250px;
+    }
+}
+@-moz-keyframes sparkle {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 250px;
+    }
+}
+@-ms-keyframes sparkle {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 250px;
+    }
+}
+@keyframes sparkle {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 250px;
+    }
+}
+
+@-moz-keyframes glowing {
+    50% {
+        box-shadow: 0px 0px 60px #f594b8;
+    }
+}
+@-ms-keyframes glowing {
+    50% {
+        box-shadow: 0px 0px 60px #f594b8;
+    }
+}
+@keyframes glowing {
+    50% {
+        box-shadow: 0px 0px 60px #f594b8;
+    }
+}
+
+/* Add this to your existing CSS file */
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg)
+    }
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+.container {
+    animation: spin 5s linear infinite;
+    perspective: 1000px
+}
+
+.container .rose-petals > div {
+    transform-style: preserve-3d; /* Ensure child elements are transformed in 3D space */
+}
+
+.container .rose-petals > div:nth-child(2) {
+    transform: rotate(-20deg);
+    top: 210px;
+    left: -4px;
+    z-index: 5;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+}
+
+.container .rose-petals > div:nth-child(3) {
+    transform: rotate(20deg);
+    z-index: 4;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+}
+
+.container .rose-petals > div:nth-child(4) {
+    transform: rotate(-10deg);
+    z-index: 3;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+}
+
+.container .rose-petals > div:nth-child(5) {
+    transform: rotate(10deg);
+    z-index: 2;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+}
+
+.container .rose-petals > div:nth-child(6) {
+    z-index: 1;
+    background: #c9204b;
+}
+
+.container .rose-petals > div:nth-child(7) {
+    z-index: 0;
+    background: #c9204b;
+}
+
+/* Add this to your existing CSS file */
+
